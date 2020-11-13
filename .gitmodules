@@ -1,0 +1,6 @@
+[submodule "devops_back"]
+	path = devops_back
+	url = git@github.com:Titae/devops_back.git
+[submodule "devops_front"]
+	path = devops_front
+	url = git@github.com:Titae/devops_front.git
