@@ -22,11 +22,11 @@ We added a git hub action that is stored in the .github/workflows/rust.yml.
 
 
 
-The Ci is launched every time we push on the main branch (master now).
+The Ci is launched every time we push on the main branch (master now)..
 
 
 
-![image-20201114094952004](/Users/james/Library/Application Support/typora-user-images/image-20201114094952004.png)
+![first](./img/first.png)
 
 
 
@@ -48,11 +48,7 @@ It s a simple Koa app listening on 3000 port.
 
 We added to this project a git hub action that ll launch the ci and the test before pushing on master.
 
-
-
-![image-20201114095613908](/Users/james/Library/Application Support/typora-user-images/image-20201114095613908.png)
-
-
+![second](./img/second.png)
 
 The Dockerfile is inside the project folder.
 
