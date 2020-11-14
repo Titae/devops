@@ -4,6 +4,8 @@ services:
     build: ./devops_front/
     depends_on:
       - back
+    networks:
+      mynetwork:
   back:
     build: ./devops_back/
     ports:
@@ -17,6 +19,9 @@ services:
       MONGODB_PASSWORD: ${MONGODB_PASSWORD}
       MONGODB_DATABASE: ${MONGODB_DATABASE}
       MONGODB_URL: mongodb
+    networks:
+      mynetwork:
+      db:
   mongodb:
     image: mongo:latest
     container_name: mongodb
@@ -36,3 +41,10 @@ services:
       - "27017:27017"
     volumes:
       - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    networks:
+      db:
+networks:
+  mynetwork:
+    driver: bridge
+  db:
+    driver: bridge
